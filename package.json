@@ -1,5 +1,5 @@
 {
-  "name": "file-saver",
+  "name": "@rxliuli/file-saver",
   "type": "module",
   "version": "2.0.5",
   "description": "An HTML5 saveAs() FileSaver implementation",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eligrey/FileSaver.js"
+    "url": "https://github.com/rxliuli/FileSaver.js"
   },
   "keywords": [
     "filesaver",
@@ -32,9 +32,9 @@
   "author": "Eli Grey <me@eligrey.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eligrey/FileSaver.js/issues"
+    "url": "https://github.com/rxliuli/FileSaver.js/issues"
   },
-  "homepage": "https://github.com/eligrey/FileSaver.js#readme",
+  "homepage": "https://github.com/rxliuli/FileSaver.js#readme",
   "devDependencies": {
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
