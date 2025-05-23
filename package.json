@@ -1,19 +1,23 @@
 {
   "name": "file-saver",
+  "type": "module",
   "version": "2.0.5",
   "description": "An HTML5 saveAs() FileSaver implementation",
-  "main": "dist/FileSaver.min.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "files": [
-    "dist/FileSaver.js",
-    "dist/FileSaver.min.js",
-    "dist/FileSaver.min.js.map",
-    "src/FileSaver.js"
+    "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "build:development": "babel -o dist/FileSaver.js --plugins @babel/plugin-transform-modules-umd src/FileSaver.js",
-    "build:production": "babel -o dist/FileSaver.min.js -s --plugins @babel/plugin-transform-modules-umd --presets minify src/FileSaver.js",
-    "build": "npm run build:development && npm run build:production",
+    "build": "tsup src/index.js --format esm,cjs --dts",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -32,9 +36,8 @@
   },
   "homepage": "https://github.com/eligrey/FileSaver.js#readme",
   "devDependencies": {
-    "@babel/cli": "^7.1.0",
-    "@babel/core": "^7.1.0",
-    "@babel/plugin-transform-modules-umd": "^7.1.0",
-    "babel-preset-minify": "^0.4.3"
-  }
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }
